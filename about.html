@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="UTF-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Tunahan Gül</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#e1e3e4",
+                      "outline": "#859399",
+                      "outline-variant": "#3c494e",
+                      "surface-variant": "#323536",
+                      "surface-container-high": "#282a2b",
+                      "secondary": "#c6c4df",
+                      "tertiary": "#d3dcff",
+                      "on-primary-fixed": "#001f28",
+                      "on-secondary-fixed-variant": "#45455b",
+                      "on-tertiary-container": "#434e6d",
+                      "primary": "#a5e7ff",
+                      "secondary-fixed-dim": "#c6c4df",
+                      "on-secondary": "#2f2e43",
+                      "surface-container-low": "#191c1d",
+                      "surface-container": "#1d2021",
+                      "primary-fixed-dim": "#47d6ff",
+                      "on-tertiary-fixed": "#0f1a37",
+                      "on-secondary-container": "#b8b6d0",
+                      "on-primary-container": "#00566a",
+                      "secondary-container": "#47475d",
+                      "on-background": "#e1e3e4",
+                      "primary-fixed": "#b6ebff",
+                      "inverse-on-surface": "#2e3132",
+                      "inverse-primary": "#00677f",
+                      "error": "#ffb4ab",
+                      "on-error-container": "#ffdad6",
+                      "surface-dim": "#111415",
+                      "surface": "#111415",
+                      "on-tertiary": "#252f4d",
+                      "inverse-surface": "#e1e3e4",
+                      "error-container": "#93000a",
+                      "tertiary-fixed-dim": "#bbc5eb",
+                      "on-error": "#690005",
+                      "primary-container": "#00d2ff",
+                      "on-secondary-fixed": "#1a1a2e",
+                      "on-surface-variant": "#bbc9cf",
+                      "tertiary-container": "#b6c0e5",
+                      "on-primary-fixed-variant": "#004e60",
+                      "on-tertiary-fixed-variant": "#3b4665",
+                      "surface-container-highest": "#323536",
+                      "surface-container-lowest": "#0c0f10",
+                      "background": "#111415",
+                      "secondary-fixed": "#e2e0fc",
+                      "on-primary": "#003543",
+                      "surface-tint": "#47d6ff",
+                      "surface-bright": "#373a3b",
+                      "tertiary-fixed": "#dae1ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "container-max": "1200px",
+                      "section-padding": "120px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "h2": [
+                              "Space Grotesk"
+                      ],
+                      "h1": [
+                              "Space Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label": [
+                              "JetBrains Mono"
+                      ],
+                      "code": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "h3": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "h2": [
+                              "2.5rem",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h1": [
+                              "4rem",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "1rem",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label": [
+                              "0.875rem",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "code": [
+                              "0.9rem",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "1.125rem",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h3": [
+                              "1.75rem",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .cosmic-bg {
+            background: radial-gradient(circle at 50% 0%, rgba(22, 33, 62, 0.8) 0%, #111415 100%);
+            background-attachment: fixed;
+        }
+        .glass-panel {
+            background: rgba(22, 33, 62, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        }
+        .lang-active {
+          background: linear-gradient(90deg, #2dd4bf, #a855f7);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          text-shadow: 0 0 12px rgba(45, 212, 191, 0.35);
+        }
+        .lang-inactive {
+          color: #859399;
+        }
+        .cursor-glow {
+            position: fixed;
+            width: 320px;
+            height: 320px;
+            border-radius: 9999px;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.04) 0%, rgba(168, 85, 247, 0.03) 45%, transparent 75%);
+            filter: blur(56px);
+            transform: translate(calc(var(--glow-x, 50vw) - 160px), calc(var(--glow-y, 50vh) - 160px));
+        }
+        .about-profile-img {
+            filter: grayscale(100%);
+            transition: filter 0.4s ease-in-out !important;
+            cursor: default !important;
+            pointer-events: auto;
+            position: relative;
+            z-index: 10;
+            image-rendering: auto;
+        }
+        .about-profile-img:hover {
+            filter: grayscale(0%) !important;
+        }
+        body {
+            position: relative;
+            isolation: isolate;
+        }
+        nav, main, footer {
+            position: relative;
+            z-index: 1;
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background antialiased cosmic-bg min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<nav class="bg-background/60 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50 flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary tracking-tight glow-text">Tunahan Gül</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300" href="index.html">Home</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform" href="about.html">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300" href="projects.html">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300" href="contact.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-label px-3 py-2 rounded-full cursor-pointer" data-lang-toggle="">
+<button class="lang-inactive" data-lang="tr" type="button">TR</button>
+<span class="text-outline px-1">/</span>
+<button class="lang-active" data-lang="en" type="button">EN</button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-h3">menu</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-section-padding flex flex-col gap-section-padding">
+<!-- About Hero Section (Bento Style) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Intro Card -->
+<div class="col-span-1 lg:col-span-8 glass-panel rounded-xl p-stack-lg flex flex-col gap-stack-md h-full relative overflow-hidden">
+<div class="absolute top-0 left-0 w-32 h-32 bg-primary/20 blur-[50px] -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+<h1 class="font-h1 text-h1 text-on-surface mb-stack-sm glow-text">
+                    <span class="text-primary">Computer Engineering</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    I am a computer engineering student and looking forward to apply what I’ve learned in real projects and gain hands-on experience. I’m especially interested in Cybersecurity, Data analysis, Software Development and I’m motivated to both contribute and continue learning in these areas.
+                </p>
+<div class="flex flex-wrap gap-stack-sm mt-stack-md">
+<span class="font-label text-label bg-[#16213e]/80 border border-primary/30 text-primary px-4 py-2 rounded-full">React</span>
+<span class="font-label text-label bg-[#16213e]/80 border border-primary/30 text-primary px-4 py-2 rounded-full">Node.js</span>
+<span class="font-label text-label bg-[#16213e]/80 border border-primary/30 text-primary px-4 py-2 rounded-full">Python</span>
+<span class="font-label text-label bg-[#16213e]/80 border border-primary/30 text-primary px-4 py-2 rounded-full">C++</span>
+<span class="font-label text-label bg-[#16213e]/80 border border-primary/30 text-primary px-4 py-2 rounded-full">Java</span>
+<span class="font-label text-label bg-[#16213e]/80 border border-primary/30 text-primary px-4 py-2 rounded-full">HTML</span>
+<span class="font-label text-label bg-[#16213e]/80 border border-primary/30 text-primary px-4 py-2 rounded-full">SQL</span>
+</div>
+</div>
+<!-- Profile Image Card -->
+<div class="col-span-1 lg:col-span-4 glass-panel rounded-xl p-stack-md h-full flex items-center justify-center">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden border border-white/5">
+<img alt="Tunahan Gul Portrait" class="w-full h-full object-cover object-center about-profile-img" src="profile.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Education & Journey Timeline -->
+<section class="flex flex-col gap-stack-lg">
+<h2 class="font-h2 text-h2 text-on-surface border-l-4 border-primary pl-stack-sm">Education Journey</h2>
+<div class="relative pl-stack-md border-l border-white/10 flex flex-col gap-stack-lg">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[25px] top-1 w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_rgba(0,210,255,0.8)]"></div>
+<div class="glass-panel rounded-lg p-stack-md ml-stack-sm hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-stack-sm">
+<h3 class="font-h3 text-h3 text-on-surface">Eastern Mediterranean University - Computer Engineering</h3>
+<span class="font-code text-code text-primary bg-primary/10 px-3 py-1 rounded">2021 - Present</span>
+</div>
+<p class="font-label text-label text-on-surface-variant mb-stack-sm">Eastern Mediterranean University</p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Focusing on software engineering principles, advanced data structures, and system architecture.
+                        </p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[25px] top-1 w-3 h-3 bg-outline rounded-full"></div>
+<div class="glass-panel rounded-lg p-stack-md ml-stack-sm hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-stack-sm">
+<h3 class="font-h3 text-h3 text-on-surface">Sakarya University of Applied Sciences - Computer Programming</h3>
+<span class="font-code text-code text-secondary bg-secondary/10 px-3 py-1 rounded">2019 - 2021</span>
+</div>
+<p class="font-label text-label text-on-surface-variant mb-stack-sm">Sakarya University of Applied Sciences</p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Focused on algorithmic thinking, practical software development workflows, and foundational database systems.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Grid -->
+<section class="flex flex-col gap-stack-lg">
+<h2 class="font-h2 text-h2 text-on-surface border-l-4 border-primary pl-stack-sm">Certificates &amp; Achievements</h2>
+<div class="relative pl-stack-md border-l border-white/10 flex flex-col gap-stack-lg">
+<div class="relative">
+<div class="absolute -left-[25px] top-1 w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_rgba(0,210,255,0.8)]"></div>
+<div class="glass-panel rounded-lg p-stack-md ml-stack-sm hover:border-primary/50 transition-colors">
+<div class="flex justify-between items-start mb-stack-sm">
+<h3 class="font-h3 text-h3 text-on-surface">Intern, IT Technician</h3>
+<span class="font-code text-code text-primary bg-primary/10 px-3 py-1 rounded">07/2020</span>
+</div>
+<p class="font-label text-label text-on-surface-variant mb-stack-sm">PirayeBilisim, BURSA</p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            I was involved in tasks such as providing computer hardware and software support, troubleshooting, and maintenance services.
+                        </p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Cert Card 1 -->
+<div class="glass-panel rounded-lg p-stack-md flex flex-col gap-stack-sm group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-stack-sm group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">workspace_premium</span>
+</div>
+<h3 class="font-label text-label text-on-surface">The Arduino Platform and C Programming</h3>
+<p class="font-code text-code text-outline-variant">University of California, Irvine (14/09/2023)</p>
+</div>
+<!-- Cert Card 2 -->
+<div class="glass-panel rounded-lg p-stack-md flex flex-col gap-stack-sm group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-stack-sm group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">code</span>
+</div>
+<h3 class="font-label text-label text-on-surface">Foundations of Cybersecurity</h3>
+<p class="font-code text-code text-outline-variant">Google (13/05/2025)</p>
+</div>
+<!-- Cert Card 3 -->
+<div class="glass-panel rounded-lg p-stack-md flex flex-col gap-stack-sm group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-stack-sm group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">directions_car</span>
+</div>
+<h3 class="font-label text-label text-on-surface">Driving License</h3>
+<p class="font-code text-code text-outline-variant">Official Certificate</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-low/80 backdrop-blur-lg border-t border-white/5 mt-auto">
+<div class="w-full px-gutter py-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary active:opacity-70">
+                Tunahan Gül
+            </div>
+<div class="font-label text-label text-outline text-center md:text-left">
+                © 2026 Tunahan Gül - Computer Engineering Student
+            </div>
+<div class="flex gap-stack-md">
+<a class="font-label text-label text-outline hover:text-primary transition-colors duration-200" href="https://www.linkedin.com/in/tunahangul/">LinkedIn</a>
+<a class="font-label text-label text-outline hover:text-primary transition-colors duration-200" href="https://github.com/Tunagull">GitHub</a>
+<a class="font-label text-label text-outline hover:text-primary transition-colors duration-200" href="mailto:tunahan.guul@gmail.com">Email</a>
+<a class="font-label text-label text-outline hover:text-primary transition-colors duration-200" href="tel:+905488904420">Phone</a>
+</div>
+</div>
+</footer>
+<script src="app.js"></script>
+<script>
+        window.PAGE_TRANSLATIONS = {
+          en: {
+            navHome: "Home",
+            navAbout: "About",
+            navProjects: "Projects",
+            navContact: "Contact",
+            mainTitle: "Computer Engineering",
+            bio: "I am a computer engineering student and looking forward to apply what I’ve learned in real projects and gain hands-on experience. I’m especially interested in Cybersecurity, Data analysis, Software Development and I’m motivated to both contribute and continue learning in these areas.",
+            journeyTitle: "Education Journey",
+            certsTitle: "Certificates & Achievements"
+          },
+          tr: {
+            navHome: "Ana Sayfa",
+            navAbout: "Hakkımda",
+            navProjects: "Projeler",
+            navContact: "İletişim",
+            mainTitle: "Bilgisayar Mühendisliği",
+            bio: "Bilgisayar mühendisliği öğrencisiyim ve öğrendiklerimi gerçek projelerde uygulayarak uygulamalı deneyim kazanmayı hedefliyorum. Özellikle Siber Güvenlik, Veri Analizi ve Yazılım Geliştirme alanlarına ilgi duyuyorum; bu alanlarda hem katkıda bulunmak hem de kendimi geliştirmek için motiveyim.",
+            journeyTitle: "Eğitim Yolculuğu",
+            certsTitle: "Sertifikalar ve Başarılar"
+          }
+        };
+
+        document.querySelector('a[href="index.html"]').setAttribute("data-i18n", "navHome");
+        document.querySelector('a[href="about.html"]').setAttribute("data-i18n", "navAbout");
+        document.querySelector('a[href="projects.html"]').setAttribute("data-i18n", "navProjects");
+        document.querySelector('a[href="contact.html"]').setAttribute("data-i18n", "navContact");
+        document.querySelector("h1 .text-primary").setAttribute("data-i18n", "mainTitle");
+        document.querySelector("p.font-body-lg").setAttribute("data-i18n", "bio");
+        document.querySelectorAll("h2.font-h2")[0].setAttribute("data-i18n", "journeyTitle");
+        document.querySelectorAll("h2.font-h2")[1].setAttribute("data-i18n", "certsTitle");
+        window.initPortfolioPage();
+      </script>
+</body></html>

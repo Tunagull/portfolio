@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="UTF-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Tunahan Gül</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .lang-active {
+            background: linear-gradient(90deg, #2dd4bf, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 12px rgba(45, 212, 191, 0.35);
+        }
+        .lang-inactive {
+            color: #859399;
+        }
+        .cursor-glow {
+            position: fixed;
+            width: 320px;
+            height: 320px;
+            border-radius: 9999px;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.04) 0%, rgba(168, 85, 247, 0.03) 45%, transparent 75%);
+            filter: blur(56px);
+            transform: translate(calc(var(--glow-x, 50vw) - 160px), calc(var(--glow-y, 50vh) - 160px));
+        }
+        body {
+            position: relative;
+            isolation: isolate;
+        }
+        header, main, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e1e3e4",
+                        "outline": "#859399",
+                        "outline-variant": "#3c494e",
+                        "surface-variant": "#323536",
+                        "surface-container-high": "#282a2b",
+                        "secondary": "#c6c4df",
+                        "tertiary": "#d3dcff",
+                        "on-primary-fixed": "#001f28",
+                        "on-secondary-fixed-variant": "#45455b",
+                        "on-tertiary-container": "#434e6d",
+                        "primary": "#a5e7ff",
+                        "secondary-fixed-dim": "#c6c4df",
+                        "on-secondary": "#2f2e43",
+                        "surface-container-low": "#191c1d",
+                        "surface-container": "#1d2021",
+                        "primary-fixed-dim": "#47d6ff",
+                        "on-tertiary-fixed": "#0f1a37",
+                        "on-secondary-container": "#b8b6d0",
+                        "on-primary-container": "#00566a",
+                        "secondary-container": "#47475d",
+                        "on-background": "#e1e3e4",
+                        "primary-fixed": "#b6ebff",
+                        "inverse-on-surface": "#2e3132",
+                        "inverse-primary": "#00677f",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#111415",
+                        "surface": "#111415",
+                        "on-tertiary": "#252f4d",
+                        "inverse-surface": "#e1e3e4",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#bbc5eb",
+                        "on-error": "#690005",
+                        "primary-container": "#00d2ff",
+                        "on-secondary-fixed": "#1a1a2e",
+                        "on-surface-variant": "#bbc9cf",
+                        "tertiary-container": "#b6c0e5",
+                        "on-primary-fixed-variant": "#004e60",
+                        "on-tertiary-fixed-variant": "#3b4665",
+                        "surface-container-highest": "#323536",
+                        "surface-container-lowest": "#0c0f10",
+                        "background": "#111415",
+                        "secondary-fixed": "#e2e0fc",
+                        "on-primary": "#003543",
+                        "surface-tint": "#47d6ff",
+                        "surface-bright": "#373a3b",
+                        "tertiary-fixed": "#dae1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "container-max": "1200px",
+                        "section-padding": "120px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "label": ["JetBrains Mono"],
+                        "code": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h2": ["2.5rem", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "h1": ["4rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["1rem", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label": ["0.875rem", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "code": ["0.9rem", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["1.125rem", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h3": ["1.75rem", { "lineHeight": "1.3", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden selection:bg-primary selection:text-on-primary-fixed">
+<div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-container/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+<div class="fixed bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-[#16213e]/40 rounded-full blur-[150px] pointer-events-none z-0"></div>
+<header class="w-full bg-background/60 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary tracking-tight">
+                Tunahan Gül
+            </div>
+<div class="hidden md:flex gap-8 items-center font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="projects.html">Projects</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="contact.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-label px-3 py-2 rounded-full cursor-pointer" data-lang-toggle="">
+<button class="lang-inactive" data-lang="tr" type="button">TR</button>
+<span class="text-outline px-1">/</span>
+<button class="lang-active" data-lang="en" type="button">EN</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-section-padding relative z-10">
+<div class="mb-16">
+<h1 class="font-h1 text-h1 text-on-surface mb-4">Connect to System.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Use the channels below for project opportunities, collaborations, or simply to talk about technology. I will respond as soon as possible.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+<div class="lg:col-span-5 flex flex-col gap-stack-md">
+<div class="bg-surface-container-low/60 backdrop-blur-[12px] border border-white/10 rounded-xl p-8 h-full flex flex-col relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none"></div>
+<h2 class="font-h3 text-h3 text-on-surface mb-8 relative z-10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+                        Contact Channels
+                    </h2>
+<div class="flex flex-col gap-6 relative z-10 flex-grow">
+<a class="flex items-center gap-4 p-4 rounded-lg bg-surface-container/30 border border-white/5 hover:border-primary/50 transition-colors group/link" href="mailto:tunahan.guul@gmail.com">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-secondary group-hover/link:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<div class="font-label text-label text-outline mb-1">EMAIL</div>
+<div class="font-code text-code text-on-surface">tunahan.guul@gmail.com</div>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-lg bg-surface-container/30 border border-white/5 hover:border-primary/50 transition-colors group/link" href="https://github.com/Tunagull">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-secondary group-hover/link:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</div>
+<div>
+<div class="font-label text-label text-outline mb-1">GITHUB</div>
+<div class="font-code text-code text-on-surface">github.com/Tunagull</div>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-lg bg-surface-container/30 border border-white/5 hover:border-primary/50 transition-colors group/link" href="https://www.linkedin.com/in/tunahangul/">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-secondary group-hover/link:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</div>
+<div>
+<div class="font-label text-label text-outline mb-1">LINKEDIN</div>
+<div class="font-code text-code text-on-surface">linkedin.com/in/tunahangul</div>
+</div>
+</a>
+<a class="flex items-center gap-4 p-4 rounded-lg bg-surface-container/30 border border-white/5 hover:border-primary/50 transition-colors group/link" href="tel:+905488904420">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-secondary group-hover/link:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<div class="font-label text-label text-outline mb-1">PHONE</div>
+<div class="font-code text-code text-on-surface">+90 548 890 44 20</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-[#16213e]/40 backdrop-blur-[20px] border border-white/10 rounded-xl p-8 relative shadow-[0_0_40px_rgba(0,0,0,0.3)]">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-h3 text-h3 text-on-surface">Create New Message</h2>
+<div class="font-code text-code text-outline-variant text-sm flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            System Active
+                        </div>
+</div>
+<form class="flex flex-col gap-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="flex flex-col gap-2">
+<label class="font-label text-label text-secondary" for="name">Full Name</label>
+<input class="bg-[#111415] border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 font-code text-code text-on-surface placeholder:text-outline-variant transition-all outline-none" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label text-label text-secondary" for="email">Email Address</label>
+<input class="bg-[#111415] border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 font-code text-code text-on-surface placeholder:text-outline-variant transition-all outline-none" id="email" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label text-label text-secondary" for="subject">Subject (Optional)</label>
+<input class="bg-[#111415] border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 font-code text-code text-on-surface placeholder:text-outline-variant transition-all outline-none" id="subject" placeholder="Project Collaboration" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label text-label text-secondary" for="message">Your Message</label>
+<textarea class="bg-[#111415] border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 font-code text-code text-on-surface placeholder:text-outline-variant transition-all outline-none resize-none" id="message" placeholder="// Write your message here..." rows="5"></textarea>
+</div>
+<div class="mt-4 flex justify-end">
+<button class="bg-primary hover:bg-primary-fixed text-[#001f28] font-label text-label py-3 px-8 rounded-lg transition-colors flex items-center gap-2 active:scale-95 group" type="submit">
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform" data-icon="send">send</span>
+<span data-i18n="sendPackage">Send Package</span>
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-surface-container-low/80 backdrop-blur-lg border-t border-white/5 relative z-10">
+<div class="w-full px-gutter py-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary">
+                Tunahan Gül
+            </div>
+<div class="font-label text-label text-secondary opacity-70 text-center md:text-left">
+                © 2026 Tunahan Gül - Computer Engineering Student
+            </div>
+<div class="flex gap-6 font-label text-label text-outline">
+<a class="hover:text-primary transition-colors duration-200 active:opacity-70" href="https://www.linkedin.com/in/tunahangul/">LinkedIn</a>
+<a class="hover:text-primary transition-colors duration-200 active:opacity-70" href="https://github.com/Tunagull">GitHub</a>
+<a class="hover:text-primary transition-colors duration-200 active:opacity-70" href="mailto:tunahan.guul@gmail.com">Email</a>
+<a class="hover:text-primary transition-colors duration-200 active:opacity-70" href="tel:+905488904420">Phone</a>
+</div>
+</div>
+</footer>
+<script src="app.js"></script>
+<script>
+        window.PAGE_TRANSLATIONS = {
+            en: {
+                navHome: "Home",
+                navAbout: "About",
+                navProjects: "Projects",
+                navContact: "Contact",
+                title: "Connect to System.",
+                subtitle: "Use the channels below for project opportunities, collaborations, or simply to talk about technology. I will respond as soon as possible.",
+                channels: "Contact Channels",
+                createMessage: "Create New Message",
+                systemActive: "System Active",
+                fullName: "Full Name",
+                emailAddress: "Email Address",
+                subject: "Subject (Optional)",
+                yourMessage: "Your Message",
+                sendPackage: "Send Package",
+                subjectPlaceholder: "Project Collaboration",
+                messagePlaceholder: "// Write your message here..."
+            },
+            tr: {
+                navHome: "Ana Sayfa",
+                navAbout: "Hakkımda",
+                navProjects: "Projeler",
+                navContact: "İletişim",
+                title: "Sisteme Bağlan.",
+                subtitle: "Proje fırsatları, iş birlikleri veya teknoloji hakkında iletişim için aşağıdaki kanalları kullanabilirsiniz. En kısa sürede dönüş yaparım.",
+                channels: "İletişim Kanalları",
+                createMessage: "Yeni Mesaj Oluştur",
+                systemActive: "Sistem Aktif",
+                fullName: "Ad Soyad",
+                emailAddress: "E-posta Adresi",
+                subject: "Konu (Opsiyonel)",
+                yourMessage: "Mesajınız",
+                sendPackage: "Paketi Gönder",
+                subjectPlaceholder: "Proje İş Birliği",
+                messagePlaceholder: "// Mesajınızı buraya yazın..."
+            }
+        };
+
+        document.querySelector('a[href="index.html"]').setAttribute("data-i18n", "navHome");
+        document.querySelector('a[href="about.html"]').setAttribute("data-i18n", "navAbout");
+        document.querySelector('a[href="projects.html"]').setAttribute("data-i18n", "navProjects");
+        document.querySelector('a[href="contact.html"]').setAttribute("data-i18n", "navContact");
+        document.querySelector("h1.font-h1").setAttribute("data-i18n", "title");
+        document.querySelector("main p.font-body-lg").setAttribute("data-i18n", "subtitle");
+        document.querySelector("h2.font-h3").setAttribute("data-i18n", "channels");
+        document.querySelectorAll("h2.font-h3")[1].setAttribute("data-i18n", "createMessage");
+        document.querySelector(".font-code.text-code.text-outline-variant.text-sm.flex.items-center.gap-2").setAttribute("data-i18n", "systemActive");
+        document.querySelector('label[for="name"]').setAttribute("data-i18n", "fullName");
+        document.querySelector('label[for="email"]').setAttribute("data-i18n", "emailAddress");
+        document.querySelector('label[for="subject"]').setAttribute("data-i18n", "subject");
+        document.querySelector('label[for="message"]').setAttribute("data-i18n", "yourMessage");
+        document.querySelector('#subject').setAttribute("data-i18n-placeholder", "subjectPlaceholder");
+        document.querySelector('#message').setAttribute("data-i18n-placeholder", "messagePlaceholder");
+        window.initPortfolioPage();
+    </script>
+</body></html>
