@@ -11,6 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -150,13 +153,24 @@
 <a class="text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="projects.html">Projects</a>
 <a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-fixed-dim transition-all duration-300 active:scale-95 transition-transform" href="contact.html">Contact</a>
 </div>
-<div class="hidden md:flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-label px-3 py-2 rounded-full cursor-pointer" data-lang-toggle="">
+<div class="flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-sm md:text-label px-2 md:px-3 py-1.5 md:py-2 rounded-full cursor-pointer shrink-0 mr-2" data-lang-toggle="">
 <button class="lang-inactive" data-lang="tr" type="button">TR</button>
 <span class="text-outline px-1">/</span>
 <button class="lang-active" data-lang="en" type="button">EN</button>
 </div>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden text-primary p-2" data-mobile-menu-button="" type="button">
+<span class="material-symbols-outlined text-2xl" data-mobile-menu-icon="">menu</span>
+</button>
 </nav>
 </header>
+<div class="hidden md:hidden bg-background/95 backdrop-blur-xl border-b border-white/10 sticky top-[72px] z-50 px-4 py-4" data-mobile-menu="">
+<div class="flex flex-col gap-4 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="projects.html">Projects</a>
+<a class="text-primary font-bold" href="contact.html">Contact</a>
+</div>
+</div>
 <main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-section-padding relative z-10">
 <div class="mb-16">
 <h1 class="font-h1 text-h1 text-on-surface mb-4">Connect to System.</h1>
@@ -253,14 +267,14 @@
 </div>
 </main>
 <footer class="w-full bg-surface-container-low/80 backdrop-blur-lg border-t border-white/5 relative z-10">
-<div class="w-full px-gutter py-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto">
-<div class="font-h3 text-h3 font-bold text-primary">
+<div class="w-full px-gutter py-stack-lg flex flex-col items-center md:flex-row md:justify-between gap-stack-md max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary glow-text text-center">
                 Tunahan Gül
             </div>
-<div class="font-label text-label text-secondary opacity-70 text-center md:text-left">
-                © 2026 Tunahan Gül - Computer Engineering Student
+<div class="font-label text-label text-secondary opacity-70 text-center">
+                © 2026 Computer Engineering Student
             </div>
-<div class="flex gap-6 font-label text-label text-outline">
+<div class="flex flex-wrap justify-center gap-4 font-label text-label text-outline">
 <a class="hover:text-primary transition-colors duration-200 active:opacity-70" href="https://www.linkedin.com/in/tunahangul/">LinkedIn</a>
 <a class="hover:text-primary transition-colors duration-200 active:opacity-70" href="https://github.com/Tunagull">GitHub</a>
 <a class="hover:text-primary transition-colors duration-200 active:opacity-70" href="mailto:tunahan.guul@gmail.com">Email</a>

@@ -58,24 +58,22 @@
       }
     });
 
-    const trToggle = document.querySelector('[data-lang="tr"]');
-    const enToggle = document.querySelector('[data-lang="en"]');
-    if (trToggle && enToggle) {
+    document.querySelectorAll('[data-lang="tr"]').forEach((trToggle) => {
       trToggle.classList.toggle("lang-active", language === "tr");
-      enToggle.classList.toggle("lang-active", language === "en");
       trToggle.classList.toggle("lang-inactive", language !== "tr");
+    });
+    document.querySelectorAll('[data-lang="en"]').forEach((enToggle) => {
+      enToggle.classList.toggle("lang-active", language === "en");
       enToggle.classList.toggle("lang-inactive", language !== "en");
-    }
+    });
 
     document.documentElement.setAttribute("lang", language === "tr" ? "tr" : "en");
     localStorage.setItem("portfolioLang", language);
   }
 
   function initLanguage(translations) {
-    const toggleContainer = document.querySelector("[data-lang-toggle]");
-    const trToggle = document.querySelector('[data-lang="tr"]');
-    const enToggle = document.querySelector('[data-lang="en"]');
-    if (!toggleContainer || !trToggle || !enToggle) {
+    const toggleContainers = document.querySelectorAll("[data-lang-toggle]");
+    if (toggleContainers.length === 0) {
       return;
     }
 
@@ -83,15 +81,50 @@
     const startLang = saved === "tr" ? "tr" : "en";
     applyLanguage(startLang, translations);
 
-    toggleContainer.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("lang") === "tr" ? "tr" : "en";
-      const next = current === "tr" ? "en" : "tr";
-      applyLanguage(next, translations);
+    toggleContainers.forEach((toggleContainer) => {
+      toggleContainer.addEventListener("click", (event) => {
+        const langButton = event.target.closest("[data-lang]");
+        if (!langButton) {
+          return;
+        }
+        const next = langButton.getAttribute("data-lang") === "tr" ? "tr" : "en";
+        applyLanguage(next, translations);
+      });
+    });
+  }
+
+  function initMobileMenu() {
+    const menuButton = document.querySelector("[data-mobile-menu-button]");
+    const menuPanel = document.querySelector("[data-mobile-menu]");
+    const menuIcon = document.querySelector("[data-mobile-menu-icon]");
+
+    if (!menuButton || !menuPanel) {
+      return;
+    }
+
+    function setMenuState(isOpen) {
+      menuPanel.classList.toggle("hidden", !isOpen);
+      menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (menuIcon) {
+        menuIcon.textContent = isOpen ? "close" : "menu";
+      }
+    }
+
+    setMenuState(false);
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuPanel.classList.contains("hidden");
+      setMenuState(isOpen);
+    });
+
+    menuPanel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMenuState(false));
     });
   }
 
   window.initPortfolioPage = function initPortfolioPage() {
     initMouseGlow();
+    initMobileMenu();
     if (window.PAGE_TRANSLATIONS) {
       initLanguage(window.PAGE_TRANSLATIONS);
     }

@@ -106,6 +106,9 @@
         }
     </script>
 <style>
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        }
         .lang-active {
             background: linear-gradient(90deg, #2dd4bf, #a855f7);
             -webkit-background-clip: text;
@@ -153,16 +156,24 @@
 <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-fixed-dim transition-all duration-300 active:scale-95" data-i18n="navProjects" href="projects.html">Projects</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 active:scale-95" data-i18n="navContact" href="contact.html">Contact</a>
 </div>
-<div class="hidden md:flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-label px-3 py-2 rounded-full cursor-pointer" data-lang-toggle="">
+<div class="flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-sm md:text-label px-2 md:px-3 py-1.5 md:py-2 rounded-full cursor-pointer shrink-0 mr-2" data-lang-toggle="">
 <button class="lang-inactive" data-lang="tr" type="button">TR</button>
 <span class="text-outline px-1">/</span>
 <button class="lang-active" data-lang="en" type="button">EN</button>
 </div>
 <!-- Mobile Menu Trigger (Simplified for static view) -->
-<button class="md:hidden text-primary p-2">
-<span class="material-symbols-outlined text-2xl">menu</span>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden text-primary p-2" data-mobile-menu-button="" type="button">
+<span class="material-symbols-outlined text-2xl" data-mobile-menu-icon="">menu</span>
 </button>
 </nav>
+<div class="hidden md:hidden bg-background/95 backdrop-blur-xl border-b border-white/10 sticky top-[72px] z-50 px-4 py-4" data-mobile-menu="">
+<div class="flex flex-col gap-4 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-i18n="navHome" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-i18n="navAbout" href="about.html">About</a>
+<a class="text-primary font-bold" data-i18n="navProjects" href="projects.html">Projects</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-i18n="navContact" href="contact.html">Contact</a>
+</div>
+</div>
 <!-- Main Content Canvas -->
 <main class="flex-grow z-10 relative">
 <!-- Header Section -->
@@ -262,18 +273,18 @@
 </main>
 <!-- Footer -->
 <footer class="bg-surface-container-low/80 backdrop-blur-lg border-t border-white/5 flat full-width w-full px-gutter py-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto z-10">
-<div class="font-h3 text-h3 font-bold text-primary active:opacity-70 transition-opacity">
+<div class="font-h3 text-h3 font-bold text-primary glow-text text-center active:opacity-70 transition-opacity">
             Tunahan Gül
         </div>
-<div class="flex items-center gap-6">
+<div class="font-label text-label text-secondary text-center">
+            © 2026 Computer Engineering Student
+        </div>
+<div class="flex flex-wrap justify-center gap-4">
 <a class="font-label text-label text-outline hover:text-primary transition-colors duration-200 active:opacity-70" href="https://www.linkedin.com/in/tunahangul/">LinkedIn</a>
 <a class="font-label text-label text-outline hover:text-primary transition-colors duration-200 active:opacity-70" href="https://github.com/Tunagull">GitHub</a>
 <a class="font-label text-label text-outline hover:text-primary transition-colors duration-200 active:opacity-70" data-i18n="footerEmail" href="mailto:tunahan.guul@gmail.com">Email</a>
 <a class="font-label text-label text-outline hover:text-primary transition-colors duration-200 active:opacity-70" data-i18n="footerPhone" href="tel:+905488904420">Phone</a>
 </div>
-<div class="font-label text-label text-secondary text-sm">
-            © 2026 Tunahan Gül - Computer Engineering Student
-        </div>
 </footer>
 <script src="app.js"></script>
 <script>

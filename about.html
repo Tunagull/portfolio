@@ -236,16 +236,24 @@
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300" href="projects.html">Projects</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:text-primary-fixed-dim transition-all duration-300" href="contact.html">Contact</a>
 </div>
-<div class="hidden md:flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-label px-3 py-2 rounded-full cursor-pointer" data-lang-toggle="">
+<div class="flex items-center gap-2 bg-background/40 border border-outline-variant/50 font-label text-sm md:text-label px-2 md:px-3 py-1.5 md:py-2 rounded-full cursor-pointer shrink-0 mr-2" data-lang-toggle="">
 <button class="lang-inactive" data-lang="tr" type="button">TR</button>
 <span class="text-outline px-1">/</span>
 <button class="lang-active" data-lang="en" type="button">EN</button>
 </div>
 <!-- Mobile Menu Icon -->
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined text-h3">menu</span>
+<button aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden text-primary p-2" data-mobile-menu-button="" type="button">
+<span class="material-symbols-outlined text-h3" data-mobile-menu-icon="">menu</span>
 </button>
 </nav>
+<div class="hidden md:hidden bg-background/95 backdrop-blur-xl border-b border-white/10 sticky top-[72px] z-50 px-4 py-4" data-mobile-menu="">
+<div class="flex flex-col gap-4 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Home</a>
+<a class="text-primary font-bold" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="projects.html">Projects</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contact</a>
+</div>
+</div>
 <!-- Main Content Canvas -->
 <main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-section-padding flex flex-col gap-section-padding">
 <!-- About Hero Section (Bento Style) -->
@@ -253,7 +261,7 @@
 <!-- Intro Card -->
 <div class="col-span-1 lg:col-span-8 glass-panel rounded-xl p-stack-lg flex flex-col gap-stack-md h-full relative overflow-hidden">
 <div class="absolute top-0 left-0 w-32 h-32 bg-primary/20 blur-[50px] -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
-<h1 class="font-h1 text-h1 text-on-surface mb-stack-sm glow-text">
+<h1 class="font-h1 text-3xl md:text-h1 text-on-surface mb-stack-sm glow-text break-words">
                     <span class="text-primary">Computer Engineering</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
@@ -359,14 +367,14 @@
 </main>
 <!-- Footer Component -->
 <footer class="bg-surface-container-low/80 backdrop-blur-lg border-t border-white/5 mt-auto">
-<div class="w-full px-gutter py-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto">
-<div class="font-h3 text-h3 font-bold text-primary active:opacity-70">
+<div class="w-full px-gutter py-stack-lg flex flex-col items-center md:flex-row md:justify-between gap-stack-md max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary glow-text text-center active:opacity-70">
                 Tunahan Gül
             </div>
-<div class="font-label text-label text-outline text-center md:text-left">
-                © 2026 Tunahan Gül - Computer Engineering Student
+<div class="font-label text-label text-outline text-center">
+                © 2026 Computer Engineering Student
             </div>
-<div class="flex gap-stack-md">
+<div class="flex flex-wrap justify-center gap-4">
 <a class="font-label text-label text-outline hover:text-primary transition-colors duration-200" href="https://www.linkedin.com/in/tunahangul/">LinkedIn</a>
 <a class="font-label text-label text-outline hover:text-primary transition-colors duration-200" href="https://github.com/Tunagull">GitHub</a>
 <a class="font-label text-label text-outline hover:text-primary transition-colors duration-200" href="mailto:tunahan.guul@gmail.com">Email</a>
